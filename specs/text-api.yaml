@@ -1,0 +1,63 @@
+openapi: '3.0.2'
+info:
+  title: Text Analytics API
+  version: '1.0'
+servers:
+  - url: https://api-dev.apigee-x.theapishop.com/ai
+security:
+  - ApiKeyAuth: [] 
+paths:
+  /text:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                document:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      description: 'The type of content to be analyzed'
+                      example: 'PLAIN_TEXT'
+                    content:
+                      type: string
+                      description: 'The content to be analyzed'
+                      example: 'This is the text content to be analyzed.'
+                encodyingType:
+                  type: string
+                  description: 'The encoding of the content'
+                  example: 'UTF8'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  documentSentiment:
+                    type: object
+                    properties:
+                      magnitude:
+                        type: number
+                        format: double
+                        description: 'Strength of emotion, from 0 to inf.'
+                        example: 3.6
+                      score:
+                        type: number
+                        format: double
+                        description: 'Overall emotion of text, from -1 to 1'
+                        example: 0.5
+                  language:
+                    type: string
+                    description: 'The detected language of the text'
+                    example: 'en'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      name: x-apikey
+      in: header

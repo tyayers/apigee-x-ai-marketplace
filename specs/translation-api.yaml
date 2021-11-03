@@ -1,0 +1,62 @@
+openapi: '3.0.2'
+info:
+  title: Translation API
+  version: '1.0'
+servers:
+  - url: https://api-dev.apigee-x.theapishop.com/ai
+security:
+  - ApiKeyAuth: [] 
+paths:
+  /translation:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                q:
+                  type: string
+                  description: 'The text content to translate'
+                  example: 'It was a dark and stormy night'
+                source:
+                  type: string
+                  description: 'The source language code'
+                  example: 'en'
+                target:
+                  type: string
+                  description: 'The target language code'
+                  example: 'es'
+                format:
+                  type: string
+                  description: 'The format of the input q'
+                  example: 'text'
+              required:
+                - q
+                - target
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      translations:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            translatedText:
+                              type: string
+                              description: 'The text in the target language'
+                              example: 'era una noche oscura y tormentosa'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      name: x-apikey
+      in: header

@@ -1,0 +1,20 @@
+<APIProxy revision="8" name="data-sentiment">
+    <DisplayName>data-ai-services</DisplayName>
+    <Description></Description>
+    <CreatedAt>1635917536066</CreatedAt>
+    <LastModifiedAt>1635917536066</LastModifiedAt>
+    <BasePaths>/ai</BasePaths>
+    <Policies>
+        <Policy>verify-api-key</Policy>
+        <Policy>remove-query-param-apikey</Policy>
+        <Policy>Prevent-URL-copy</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>Google Language</TargetEndpoint>
+        <TargetEndpoint>Google Translate</TargetEndpoint>
+        <TargetEndpoint>Google Vision</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
