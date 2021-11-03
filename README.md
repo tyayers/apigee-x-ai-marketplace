@@ -11,8 +11,8 @@ subscriptions to in a sample portal (as pictured above).
 
 ## Steps to deploy
 
-1. Download the release of the AI Services API proxy and import into Apigee by
-   going to **Develop > API Proxies > Create New**.
+1. Download the [v1 release](https://github.com/tyayers/apigee-x-ai-marketplace/releases/tag/v1) of the AI Services API proxy and import into Apigee by
+   going to **Develop > API Proxies > Create New**.  This proxy will provide an API facade to 3 Google AI backend services.
 2. Select **Upload proxy bundle** and select the ZIP file downloaded in step 1.
 3. Confirm all selections and save the new proxy (do not deploy yet).
 4. For the deployment we will need a GCP service account configured with the
