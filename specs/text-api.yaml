@@ -3,7 +3,7 @@ info:
   title: Text Analytics API
   version: '1.0'
 servers:
-  - url: https://test.apigee.theapishop.com/ai
+  - url: https://api-dev.apigee-x.theapishop.com/ai
 security:
   - ApiKeyAuth: [] 
 paths:
