@@ -3,7 +3,7 @@ info:
   title: Translation API
   version: '1.0'
 servers:
-  - url: https://api-dev.apigee-x.theapishop.com/ai
+  - url: https://test.apigee.hybrid.bazapi.com/ai
 security:
   - ApiKeyAuth: [] 
 paths:
