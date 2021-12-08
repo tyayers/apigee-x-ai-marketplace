@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Text Analytics API",
+        "description": "Processes key words, sentiment, and other industry specific insights from text.",
+        "displayName": "Text Analytics API",
+        "approvalType": "auto",
+        "attributes": [
+            {
+                "name": "access",
+                "value": "public"
+            },
+            {
+                "name": "image",
+                "value": "https://raw.githubusercontent.com/tyayers/apigee-x-ai-marketplace/main/img/text-icon.svg"
+            },
+            {
+                "name": "spec",
+                "value": "https://raw.githubusercontent.com/tyayers/apigee-x-ai-marketplace/main/specs/text-api.yaml"
+            }
+        ],
+        "environments": [
+            "test1"
+        ],
+        "createdAt": "1638936725697",
+        "lastModifiedAt": "1638936725697",
+        "operationGroup": {
+            "operationConfigs": [
+                {
+                    "apiSource": "data-ai-services",
+                    "operations": [
+                        {
+                            "resource": "/text",
+                            "methods": [
+                                "GET",
+                                "PATCH",
+                                "POST",
+                                "PUT",
+                                "DELETE",
+                                "HEAD",
+                                "CONNECT",
+                                "OPTIONS",
+                                "TRACE"
+                            ]
+                        }
+                    ],
+                    "quota": {}
+                }
+            ],
+            "operationConfigType": "proxy"
+        }
+    },
+    {
+        "name": "Image API",
+        "description": "Processes raw images for text, readings and crowd analytics.",
+        "displayName": "Image API",
+        "approvalType": "auto",
+        "attributes": [
+            {
+                "name": "access",
+                "value": "public"
+            },
+            {
+                "name": "image",
+                "value": "https://raw.githubusercontent.com/tyayers/apigee-x-ai-marketplace/main/img/image-icon.svg"
+            },
+            {
+                "name": "spec",
+                "value": "https://raw.githubusercontent.com/tyayers/apigee-x-ai-marketplace/main/specs/image-api.yaml"
+            }
+        ],
+        "environments": [
+            "test1"
+        ],
+        "createdAt": "1638936698018",
+        "lastModifiedAt": "1638936698018",
+        "operationGroup": {
+            "operationConfigs": [
+                {
+                    "apiSource": "data-ai-services",
+                    "operations": [
+                        {
+                            "resource": "/image",
+                            "methods": [
+                                "GET",
+                                "PATCH",
+                                "POST",
+                                "PUT",
+                                "DELETE",
+                                "HEAD",
+                                "CONNECT",
+                                "OPTIONS",
+                                "TRACE"
+                            ]
+                        }
+                    ],
+                    "quota": {}
+                }
+            ],
+            "operationConfigType": "proxy"
+        }
+    },
+    {
+        "name": "Translation API",
+        "description": "Translates text from any language in real-time.",
+        "displayName": "Translation API",
+        "approvalType": "auto",
+        "attributes": [
+            {
+                "name": "access",
+                "value": "public"
+            },
+            {
+                "name": "image",
+                "value": "https://raw.githubusercontent.com/tyayers/apigee-x-ai-marketplace/main/img/translate-icon.svg"
+            },
+            {
+                "name": "spec",
+                "value": "https://raw.githubusercontent.com/tyayers/apigee-x-ai-marketplace/main/specs/translation-api.yaml"
+            }
+        ],
+        "environments": [
+            "test1"
+        ],
+        "createdAt": "1638936658365",
+        "lastModifiedAt": "1638936658365",
+        "operationGroup": {
+            "operationConfigs": [
+                {
+                    "apiSource": "data-ai-services",
+                    "operations": [
+                        {
+                            "resource": "/translation",
+                            "methods": [
+                                "GET",
+                                "PATCH",
+                                "POST",
+                                "PUT",
+                                "DELETE",
+                                "HEAD",
+                                "CONNECT",
+                                "OPTIONS",
+                                "TRACE"
+                            ]
+                        }
+                    ],
+                    "quota": {}
+                }
+            ],
+            "operationConfigType": "proxy"
+        }
+    }
+]
