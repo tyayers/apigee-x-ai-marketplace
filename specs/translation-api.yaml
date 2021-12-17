@@ -3,7 +3,7 @@ info:
   title: Translation API
   version: '1.0'
 servers:
-  - url: https://test.apigee.hybrid.bazapi.com/ai
+  - url: https://test.apigee.hybrid.cloud10x.net/ai
 security:
   - ApiKeyAuth: [] 
 paths:
@@ -58,5 +58,5 @@ components:
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
-      name: x-apikey
+      name: x-api-key
       in: header
